@@ -67,6 +67,34 @@ body.dark-mode a {
   border-radius: 5px;
 }
 
+/* set new header-flex type */
+.header-flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* set how the image will look */
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+/* makes image responsive for small screens */
+@media (max-width: 600px) {
+  .header-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
 /* adds option for lists to not have bullets */
 li.no-bullet {
   list-style-type: none;
