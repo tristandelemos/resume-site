@@ -3,7 +3,14 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    /* Light mode default */
+    background-color: white;
+    color: black;
+  }
+  /* Dark mode */
+  body.dark-mode {
+    background-color: #121212;
+    color: white;
   }
   
   header, section, footer {
@@ -23,4 +30,23 @@ body {
     color: #0077cc;
     text-decoration: none;
   }
-  
+
+
+
+
+  /* Toggle button */
+  #darkModeToggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border: none;
+    background: #eee;
+    border-radius: 5px;
+  }
+
+  body.dark-mode #darkModeToggle {
+    background: #333;
+    color: white;
+  }

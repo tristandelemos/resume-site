@@ -10,6 +10,7 @@
   <header>
     <h1>Tristan de Lemos</h1>
     <p>Computer Engineer | Python | Embedded Systems</p>
+    <button id="darkModeToggle">🌙 Toggle Dark Mode</button>
   </header>
 
   <section id="about">
@@ -38,5 +39,27 @@
   <footer>
     <p>© 2025 Tristan de Lemos</p>
   </footer>
+
+  <script>
+  const toggle = document.getElementById('darkModeToggle');
+  const body = document.body;
+
+  // Load saved theme
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+  }
+
+  toggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+
+    // Save preference
+    if (body.classList.contains('dark-mode')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+  });
+</script>
+
 </body>
 </html>
