@@ -53,16 +53,24 @@ body.dark-mode a {
   color: #80bfff;
 }
 
+/* Toggle button */
+#darkModeToggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
+  background: #eee;
+  border-radius: 5px;
+}
 
-  /* Toggle button */
-  #darkModeToggle {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    border: none;
-    background: #eee;
-    border-radius: 5px;
-  }
+/* removes bullet from all video items */ 
+li video {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  display: block;
+}
+
 
