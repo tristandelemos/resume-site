@@ -1,19 +1,21 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    /* Light mode default */
-    background-color: grey;
-    color: black;
-  }
-  /* Dark mode */
-  body.dark-mode {
-    background-color: #121212;
-    color: white;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  /* Light mode default */
+  background-color: lightgrey;
+  color: black;
+}
+
+/* Dark mode */
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
   
-  header, section, footer {
+/* Stylizing for header, section, and footer */
+header, section, footer {
   padding: 20px;
   max-width: 800px;
   margin: auto;
@@ -65,7 +67,7 @@ body.dark-mode a {
   border-radius: 5px;
 }
 
-/* added option for lists to not have bullets */
+/* adds option for lists to not have bullets */
 li.no-bullet {
   list-style-type: none;
   margin-left: 0;

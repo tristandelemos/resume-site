@@ -7,27 +7,33 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Header with name and tagline -->
   <header>
     <h1>Tristan de Lemos</h1>
     <p>Computer Engineer | Python | Embedded Systems</p>
     <button id="darkModeToggle">Toggle Dark Mode</button>
   </header>
 
+  <!-- About section -->
   <section id="about">
     <h2>About Me</h2>
     <p>I’m a Computer Engineering graduate from Cal Poly SLO. I recently returned from teaching English in South Korea and I am passionate about building systems that bridge hardware and software.</p>
   </section>
 
+  <!-- Resume download link -->
   <section id="resume">
     <h2>Resume</h2>
     <p><a href="resume.pdf" download>Download PDF Resume</a></p>
   </section>
   
+  <!-- Project section -->
   <section id="projects">
     <h2>Projects</h2>
     <ul>
+      <!-- Project: Arduino laser audio demo -->
       <li><strong>Bypassing Voice Assistants:</strong> Developed a security testing prototype using an Arduino to output a .wav file via a laser, successfully bypassing voice recognition systems on devices such as Amazon Alexa.</li>
         <ul>
+          <!-- Embedded video demo -->
           <li class="no-bullet">
             <video width="640" height="360" controls>
               <source src="videos/laser_video.mp4" type="video/mp4">
@@ -35,10 +41,12 @@
             </video>
           </li>
         </ul>
+      <!-- Coming soon project -->  
       <li><strong>Coming Soon:</strong> Vehicle Diagnostics Reader (OBD-II)</li>
     </ul>
   </section>
 
+  <!-- Contact section -->
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: tjdelemos@gmail.com</p>
