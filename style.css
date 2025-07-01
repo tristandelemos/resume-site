@@ -94,12 +94,20 @@ body.dark-mode a {
   }
 }
 
-
 /* adds option for lists to not have bullets */
 li.no-bullet {
   list-style-type: none;
   margin-left: 0;
   padding-left: 0;
+}
+
+/* Create new video class to change size for mobile viewing */
+.responsive-video {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  display: block;
+  margin: 1rem auto;
 }
 
 
