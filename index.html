@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tristan de Lemos – Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
   <!-- Header with name and tagline -->
@@ -45,27 +46,6 @@
   <footer>
     <p>2025 Tristan de Lemos</p>
   </footer>
-
-  <script>
-  const toggle = document.getElementById('darkModeToggle');
-  const body = document.body;
-
-  // Load saved theme
-  if (localStorage.getItem('theme') === 'dark') {
-    body.classList.add('dark-mode');
-  }
-
-  toggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-
-    // Save preference
-    if (body.classList.contains('dark-mode')) {
-      localStorage.setItem('theme', 'dark');
-    } else {
-      localStorage.setItem('theme', 'light');
-    }
-  });
-</script>
 
 </body>
 </html>
