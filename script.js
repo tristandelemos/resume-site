@@ -1,11 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
   
-  // Side bar Toggle
-  const menuToggle = document.getElementById('menuToggle');
-  const sidebar = document.getElementById('sidebar');
+  // fetch allows for sidebar menu to be dynamically loaded for each page
+  fetch('/resume-site/pages/menu.html')  
+    .then(response => response.text()) 
+    .then(html => {
+      document.getElementById('menu-placeholder').innerHTML = html;
+    
 
-  menuToggle?.addEventListener('click', () => {
-    sidebar?.classList.toggle('show');
+    // Side bar Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+
+    menuToggle?.addEventListener('click', () => {
+      sidebar?.classList.toggle('show');
+    });
   });
   
   // Dark Mode Toggle
