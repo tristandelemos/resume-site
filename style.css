@@ -59,7 +59,7 @@ body.dark-mode a {
 #darkModeToggle {
   position: fixed;
   top: 1rem;
-  right: 1rem;
+  left: 1rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
   border: none;
