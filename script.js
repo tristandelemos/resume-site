@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
+  
+  // Side bar Toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const sidebar = document.getElementById('sidebar');
+
+  menuToggle?.addEventListener('click', () => {
+    sidebar?.classList.toggle('show');
+  });
+  
+  // Dark Mode Toggle
   const toggle = document.getElementById('darkModeToggle');
   const body = document.body;
 
