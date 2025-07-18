@@ -118,6 +118,7 @@ li.no-bullet {
   position: fixed;
   top: 10px;
   right: 10px;  
+  background: yellow;
 }
 
 /* side bar comes in from right side of screen */
