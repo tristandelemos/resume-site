@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // fetch allows for sidebar menu to be dynamically loaded for each page
   
-  fetch('resume-site/project/pages/menu.html')  
+  fetch('project/pages/menu.html')  
     .then(response => response.text()) 
     .then(html => {
       document.getElementById('sidebar').innerHTML = html;
