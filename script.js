@@ -19,12 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem('theme', 'light');
     }
   });
-  
+
   // fetch allows for sidebar menu to be dynamically loaded for each page
   fetch('/resume-site/pages/menu.html')  
     .then(response => response.text()) 
     .then(html => {
-      document.getElementById('menu-placeholder').innerHTML = html;
+      document.getElementById('menu').innerHTML = html;
     
 
     // Side bar Toggle
