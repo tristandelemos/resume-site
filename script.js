@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   fetch('/resume-site/project/pages/menu.html')  
     .then(response => response.text()) 
     .then(html => {
-      document.getElementById('menu').innerHTML = html;
+      document.getElementById('sidebar').innerHTML = html;
     
 
     // Side bar Toggle
