@@ -1,21 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
   
-  // fetch allows for sidebar menu to be dynamically loaded for each page
-  fetch('/resume-site/pages/menu.html')  
-    .then(response => response.text()) 
-    .then(html => {
-      document.getElementById('menu-placeholder').innerHTML = html;
-    
-
-    // Side bar Toggle
-    const menuToggle = document.getElementById('menuToggle');
-    const sidebar = document.getElementById('sidebar');
-
-    menuToggle?.addEventListener('click', () => {
-      sidebar?.classList.toggle('show');
-    });
-  });
-  
   // Dark Mode Toggle
   const toggle = document.getElementById('darkModeToggle');
   const body = document.body;
@@ -35,4 +19,22 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem('theme', 'light');
     }
   });
+  
+  // fetch allows for sidebar menu to be dynamically loaded for each page
+  fetch('/resume-site/pages/menu.html')  
+    .then(response => response.text()) 
+    .then(html => {
+      document.getElementById('menu-placeholder').innerHTML = html;
+    
+
+    // Side bar Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+
+    menuToggle?.addEventListener('click', () => {
+      sidebar?.classList.toggle('show');
+    });
+  });
+  
+  
 });
