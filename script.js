@@ -24,17 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
   fetch('project/pages/menu.html')
     .then(response => response.text())
     .then(html => {
-      // Load into menu container (outside of sidebar)
-      document.getElementById('menu-container').innerHTML = html;
-
-      // Add event listener for toggle
-      const menuToggle = document.getElementById('menuToggle');
-      const sidebar = document.getElementById('sidebar');
-
-      menuToggle?.addEventListener('click', () => {
-        sidebar.classList.toggle('show');
-      });
+      document.getElementById('sidebar').innerHTML = html;
     })
     .catch(error => console.error('Failed to load menu:', error));
+
+  // Attach toggle button event
+  const menuToggle = document.getElementById('menuToggle');
+  const sidebar = document.getElementById('sidebar');
+
+  menuToggle?.addEventListener('click', () => {
+    sidebar?.classList.toggle('show');
+  });
   
 });
