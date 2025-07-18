@@ -25,12 +25,21 @@ document.addEventListener('DOMContentLoaded', () => {
   fetch('project/pages/menu.html')  
     .then(response => response.text()) 
     .then(html => {
+      console.log('Menu HTML loaded:', html);
+
       document.getElementById('sidebar').innerHTML = html;
-    
+      
+      const sidebar = document.getElementById('sidebar');
+      
+      console.log('Sidebar innerHTML:', sidebar.innerHTML);
+      
+      const menuToggle = document.getElementById('menuToggle');
+
+      console.log('menuToggle:', menuToggle);
 
     // Side bar Toggle
-    const menuToggle = document.getElementById('menuToggle');
-    const sidebar = document.getElementById('sidebar');
+    
+    
 
     menuToggle?.addEventListener('click', () => {
       sidebar?.classList.toggle('show');
