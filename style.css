@@ -119,6 +119,10 @@ li.no-bullet {
   top: 10px;
   right: 10px;  
   background: yellow;
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
 }
 
 /* side bar comes in from right side of screen */
