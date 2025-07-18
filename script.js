@@ -20,22 +20,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // fetch allows for sidebar menu to be dynamically loaded for each page
-  
-  // Load menu dynamically
+  // Load menu
   fetch('project/pages/menu.html')
     .then(response => response.text())
     .then(html => {
-      const sidebar = document.getElementById('sidebar');
-      sidebar.innerHTML = html;
+      // Load into menu container (outside of sidebar)
+      document.getElementById('menu-container').innerHTML = html;
 
-      // After menu is loaded, attach toggle
+      // Add event listener for toggle
       const menuToggle = document.getElementById('menuToggle');
+      const sidebar = document.getElementById('sidebar');
+
       menuToggle?.addEventListener('click', () => {
         sidebar.classList.toggle('show');
       });
     })
     .catch(error => console.error('Failed to load menu:', error));
-  
   
 });

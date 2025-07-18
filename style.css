@@ -123,6 +123,7 @@ li.no-bullet {
   color: white;
   padding: 5px 10px;
   border-radius: 4px;
+  z-index: 10000;
 }
 
 /* side bar comes in from right side of screen */
