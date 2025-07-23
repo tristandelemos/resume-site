@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Load menu
-  fetch('resume-site/menu.html')
+  fetch('/resume-site/menu.html')
     .then(response => response.text())
     .then(html => {
       document.getElementById('sidebar').innerHTML = html;
