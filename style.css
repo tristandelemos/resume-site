@@ -89,9 +89,14 @@ body.dark-mode a {
 
 /* makes image responsive for small screens */
 @media (max-width: 600px) {
+  /* sets center header image */
   .header-flex {
     flex-direction: column;
     text-align: center;
+  }
+  /* About page grid becomes single column */
+  .image-grid{
+    grid-template-columns: 1fr;
   }
 }
 
@@ -131,7 +136,7 @@ li.no-bullet {
   position: fixed;
   top: 0;
   right: 0;
-  width: 150px;
+  width: 140px;
   height: 100%;
   background: #333;
   color: white;
@@ -157,7 +162,7 @@ li.no-bullet {
 }
 
 /* Add padding so the menu and first child do not overlap */
-#sidebar a:first-child{
+#sidebar a:first-child {
   margin-top: 60px;
 }
 
@@ -165,3 +170,19 @@ li.no-bullet {
 #sidebar a:hover {
   background: #444;
 }
+
+/* image grid for about page */
+.image-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1rem;
+}
+
+/* image grid image settings */
+.image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
