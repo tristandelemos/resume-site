@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
     sidebar?.classList.toggle('show');
   });
 
+  const basePath = '/resume-site/';
+
   // Load menu
   fetch('/resume-site/menu.html')
     .then(response => response.text())
@@ -39,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const links = sidebar.querySelectorAll('a[data-page]');
     links.forEach(link => {
       const page = link.getAttribute('data-page');
-      link.setAttribute('href', new URL(page, window.location.origin + '/resume-site/').pathname);
+      link.setAttribute('href', basePath + page);
     });
   })
   .catch(error => console.error('Failed to load menu:', error));
