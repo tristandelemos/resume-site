@@ -25,23 +25,22 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(response => response.text())
     .then(html => {
       document.getElementById('sidebar').innerHTML = html;
-    })
-    .catch(error => console.error('Failed to load menu:', error));
 
-  // Attach toggle button event
-  const menuToggle = document.getElementById('menuToggle');
-  const sidebar = document.getElementById('sidebar');
+    // Attach toggle button event
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
 
-  menuToggle?.addEventListener('click', () => {
-    sidebar?.classList.toggle('show');
-  });
+    menuToggle?.addEventListener('click', () => {
+      sidebar?.classList.toggle('show');
+    });
 
-  // Create function to find sidebar links for where ever you are in the website
-  const links = sidebar.querySelectorAll('a[data-page]');
-  links.forEach(link => {
-    const page = link.getAttribute('data-page');
-    link.setAttribute('href', new URL(page, window.location.origin + '/resume-site/').pathname);
-  });
+    // Create function to find sidebar links for where ever you are in the website
+    const links = sidebar.querySelectorAll('a[data-page]');
+    links.forEach(link => {
+      const page = link.getAttribute('data-page');
+      link.setAttribute('href', new URL(page, window.location.origin + '/resume-site/').pathname);
+    });
+  })
+  .catch(error => console.error('Failed to load menu:', error));
 
-  
 });
