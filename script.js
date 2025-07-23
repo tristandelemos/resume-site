@@ -20,19 +20,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Attach toggle button event
+  const menuToggle = document.getElementById('menuToggle');
+  const sidebar = document.getElementById('sidebar');
+
+  // Listen for clicking of menu button
+  menuToggle?.addEventListener('click', () => {
+    sidebar?.classList.toggle('show');
+  });
+
   // Load menu
   fetch('menu.html')
     .then(response => response.text())
     .then(html => {
       document.getElementById('sidebar').innerHTML = html;
-
-    // Attach toggle button event
-    const menuToggle = document.getElementById('menuToggle');
-    const sidebar = document.getElementById('sidebar');
-
-    menuToggle?.addEventListener('click', () => {
-      sidebar?.classList.toggle('show');
-    });
 
     // Create function to find sidebar links for where ever you are in the website
     const links = sidebar.querySelectorAll('a[data-page]');
