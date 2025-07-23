@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Load menu
-  fetch('project/pages/menu.html')
+  fetch('menu.html')
     .then(response => response.text())
     .then(html => {
       document.getElementById('sidebar').innerHTML = html;
