@@ -16,10 +16,11 @@ You can view the live website here:
 - Modular content loading via JavaScript
 - Responsive design (basic, can be extended)
 - Clean and simple interface for quick viewing
+- Dynamic sidebar navigation without page reloads
+- Dark mode toggle
 
 ## 📌 Future Improvements
-- Dynamic sidebar navigation without page reloads
 - Improve responsiveness for mobile devices
+- Add embedded resume into new resume page
 - Add animations and transitions
-- Implement dark mode toggle
 - Fetch project data from JSON or API for scalability
