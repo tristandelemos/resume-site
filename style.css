@@ -155,7 +155,6 @@ li.no-bullet {
 #sidebar a {
   color: white;
   text-decoration: none;
-  padding: 10px;
   text-align: center;
   display: block; /* Makes each link take full space of sidebar */
   width: 100%;
