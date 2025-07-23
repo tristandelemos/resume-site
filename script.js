@@ -35,5 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
   menuToggle?.addEventListener('click', () => {
     sidebar?.classList.toggle('show');
   });
+
+  // Create function to find sidebar links for where ever you are in the website
+  const links = sidebar.querySelectorAll('a[data-page]');
+  links.forEach(link => {
+    const page = link.getAttribute('data-page');
+    link.setAttribute('href', new URL(page, window.location.origin + '/resume-site/').pathname);
+  });
+
   
 });
