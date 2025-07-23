@@ -156,6 +156,12 @@ li.no-bullet {
   width: 100%;
 }
 
+/* Add padding so the menu and first child do not overlap */
+#sidebar a:first-child{
+  margin-top: 60px;
+}
+
+/* Add hovering coloration */
 #sidebar a:hover {
   background: #444;
 }
