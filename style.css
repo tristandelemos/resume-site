@@ -77,7 +77,8 @@ body.dark-mode a {
   padding: 20px;
 }
 
-/* set how the image will look */
+/* set how the profile image will look */
+/* set to circular frame */
 .profile-img {
   width: 100px;
   height: 100px;
@@ -118,7 +119,6 @@ li.no-bullet {
   position: fixed;
   top: 10px;
   right: 10px;  
-  background: yellow;
   background-color: #333;
   color: white;
   padding: 5px 10px;
@@ -152,6 +152,8 @@ li.no-bullet {
   text-decoration: none;
   padding: 10px;
   text-align: center;
+  display: block; /* Makes each link take full space of sidebar */
+  width: 100%;
 }
 
 #sidebar a:hover {
